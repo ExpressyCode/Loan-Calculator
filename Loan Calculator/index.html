@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Fontawesome cdn -->
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Stop Favicon request -->
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+
+    <title>Loan Calculator</title>
+
+    <style>
+      #loading, #result {
+        display: none;
+      }
+
+    </style>
+  </head>
+  <body class="bg-dark">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <div class="card card-body text-center mt-5">
+            <h1 class="heading display-6">Loan Calculator</h1>
+            
+            <!-- Form -->
+            <form id="form-input" class="mb-3">
+              <!-- Amount -->
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-dollar-sign"></i></span>
+                </div>
+                <input type="number" name="amount" class="form-control" placeholder="Amount">
+              </div>
+              <!-- Interest -->
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-percent"></i></span>
+                </div>
+                <input type="number" name="interest" class="form-control" placeholder="Interest">
+              </div>
+              <!-- years -->
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="far fa-clock"></i></span>
+                </div>
+                <input type="number" name="years" class="form-control" placeholder="Years">
+              </div>
+              <input type="submit" class="btn btn-dark btn-block" value="Calculate loan">
+            </form>
+            
+            <!-- Loading GIF -->
+            <div id="loading">
+              <img src="/images/loading.gif">
+            </div>
+
+            <!-- Output -->
+            <div id="result">
+              <h2>Result</h2>
+              <!-- Monthly Payment -->
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Monthly Payment</span>
+                </div>
+                <input type="number" id="monthly-payment" class="form-control" disabled>
+              </div>
+              <!-- Total Payment -->
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Total Payment</i></span>
+                </div>
+                <input type="number" id="total-payment" class="form-control" disabled>
+              </div>
+              <!-- Total Interest -->
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Total Interest</span>
+                </div>
+                <input type="number" id="total-interest" class="form-control" disabled>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="/app.js"></script>
+  </body>
+</html>
